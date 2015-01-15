@@ -1,0 +1,15 @@
+{%  extends "::base.html.twig" %}
+
+{%  block body %}
+	<h3>Formulaire d'ajout/édition d'auteur</h3>
+	{% if app.user.pseudo == pseudo  %}
+	<div class="well">
+	  <form method="post">
+	    {{ form_widget(form) }}
+	    <input type="submit" value="Valider" class="btn btn-primary" />
+	  </form>
+	</div>
+	{% else %}
+	Vous ne pouvez modifier que votre propre compte.
+	{%  endif %}
+{%  endblock %}

@@ -1,0 +1,15 @@
+{%  extends "::base.html.twig" %}
+
+{%  block body %}
+	<h3>Formulaire d'ajout/édition d'article</h3>
+	{% if app.user.pseudo is defined  %}
+	<div class="well">
+	  <form method="post">
+	    {{ form_widget(form) }}
+	    <input type="submit" class="btn btn-primary" />
+	  </form>
+	</div>
+	{% else %}
+	Vous devez être connecté à votre compte pour pouvoir effectuer cette action.
+	{%  endif %}
+{%  endblock %}

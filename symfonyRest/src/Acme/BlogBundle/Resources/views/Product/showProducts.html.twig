@@ -1,0 +1,7 @@
+<ul id="product-list">
+{% for product in products %}
+	<li>[{{ product.id }}] {{ product.name }} - {{ product.price }} &euro;</li>
+{% else %}
+<li>{#{{ 'product.list.empty'|trans({}, 'AcmeBlogBundle') }}#}Aucun produit trouv&eacute;</li>
+{% endfor %}
+</ul>

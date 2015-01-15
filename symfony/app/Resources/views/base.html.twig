@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>{% block title %}Welcome!{% endblock %}</title> {% block
+		stylesheets %}{% endblock %}
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+	</head>
+<body>
+	<div style="width: 30%; float: left;">{% block left %}
+		{% render(controller('HBBlogBundle:Login:login')) %} {% endblock %}
+	</div>
+	<div style="width: 69%; float: left;">{% block body %}{% endblock %}</div>
+	{% block javascripts %}{% endblock %}
+</body>
+</html>

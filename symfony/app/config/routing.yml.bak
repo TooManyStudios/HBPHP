@@ -1,0 +1,10 @@
+hb_blog:
+    resource: "@HBBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+login_check:
+    pattern: /login_check
+    
+logout:
+    pattern: /logout

@@ -1,0 +1,24 @@
+hb_rest:
+    resource: "@HBRestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+hb_blog:
+    resource: "@HBBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout
+    
+article:
+    type: rest
+    resource: "@HBBlogBundle/Resources/config/routes.yml"
+    prefix: /api
+    
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
